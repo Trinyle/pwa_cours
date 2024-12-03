@@ -88,7 +88,6 @@
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             border-top: 3px solid var(--secondary-color);
-            //edit pierre
             display: flex;
             flex-direction: column;
         }
@@ -168,7 +167,6 @@
             
             header {
                 flex-direction: column;
-                //add Pierre
                 padding: 0.5rem;
             }
             
