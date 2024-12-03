@@ -1,0 +1,51 @@
+{
+    "name": "Les News du Web",
+    "short_name": "News Web",
+    "description": "Actualités et nouvelles du web",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "display_override": ["fullscreen", "minimal-ui"],
+    "background_color": "#f5f6fa",
+    "theme_color": "#002631",
+    "version": "1.0",
+    "icons": [
+        {
+            "src": "icons/192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "orientation": "portrait",
+    "prefer_related_applications": false,
+    "lang": "fr-FR",
+    "dir": "ltr",
+    "screenshots": [
+        {
+         "src": "screenshot.png",
+          "sizes": "640x368",
+          "type": "image/png",
+          "form_factor": "wide",
+          "label": "News du web ! La page"
+        },
+        {
+            "src": "screenshot2.png",
+             "sizes": "640x368",
+             "type": "image/png",
+             "form_factor": "wide",
+             "label": "News du Web ! Article"
+           },
+           {
+               "src": "screenshot3.png",
+                "sizes": "640x368",
+                "type": "image/png",
+                "form_factor": "wide",
+                "label": "News du Web ! Article 2"
+            }
+    ]
+}
