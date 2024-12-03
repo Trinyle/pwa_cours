@@ -7,7 +7,7 @@ window.addEventListener('beforeinstallprompt', event => {
     installBtn.style.display = 'block'
 })
 
-installBtn/addEventListener('click', async (event) => {
+installBtn.addEventListener('click', async (event) => {
     event.preventDefault()
     if(deferredPrompt){
         deferredPrompt.prompt()
