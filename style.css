@@ -1,0 +1,229 @@
+:root {
+            --primary-color: #002631;
+            --secondary-color: #02BCB7;
+            --text-color: #333;
+            --background-color: #f5f6fa;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .header-title {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        .install-button {
+            position: fixed;
+            right: 0rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: none;
+            rotate: 0deg;
+            top: 25%;
+            z-index: 10;
+            width: 5rem;
+        }
+        .install-button img {
+            max-width: 100%;
+        }
+        .install-button:hover img {
+            filter: invert();
+        }
+
+        .install-button:hover {
+            background-color: #029995;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .article {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--secondary-color);
+            //edit pierre
+            display: flex;
+            flex-direction: column;
+        }
+
+        .articles.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            color: var(--primary-color);
+            margin: 0.5rem 0;
+            height: 24px;
+            margin-bottom: 10px;
+        }
+
+        .article-subtitle {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            height: 20px;
+            width: 70%;
+        }
+
+        .article-content {
+            height: 100px;
+            margin: 10px 0;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--secondary-color);
+            height: 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        .loading-placeholder {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .site-logo {
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        @media (max-width: 480px) {
+            .site-logo {
+                width: 120px;
+            }
+            
+            header {
+                flex-direction: column;
+                //add Pierre
+                padding: 0.5rem;
+            }
+            
+            .header-title {
+                font-size: 1.5rem;
+            }
+            .articles {
+                flex-direction: column; /* Stack articles vertically */
+                gap: 1rem;
+            }
+            .article {
+                flex: none; /* Remove flex property */
+                width: calc(100% - 40px); /* Full width minus padding */
+                min-width: unset;
+                margin-bottom: 1rem;
+            }
+
+            .container {
+                padding: 10px;
+                width: calc(100% - 20px); /* Account for container padding */
+            }
+
+            .article img {
+                height: 150px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .article-title {
+                font-size: 1.2rem;
+                height: auto;
+                margin-bottom: 8px;
+            }
+
+            .article-subtitle {
+                font-size: 1rem;
+                height: auto;
+                width: 100%;
+            }
+
+            .article-content {
+                height: auto;
+                font-size: 0.9rem;
+            }
+
+            .article-meta {
+                font-size: 0.8rem;
+                height: auto;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .install-button {
+                position: fixed;
+                margin-top: -4rem;
+                right: -5px;
+                width: 4rem;;
+            }
+        }
